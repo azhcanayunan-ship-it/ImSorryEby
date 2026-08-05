@@ -1,0 +1,202 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>I'm Sorry ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Great+Vibes&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+height:100vh;
+overflow:hidden;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#ffdde1,#ee9ca7);
+font-family:Poppins,sans-serif;
+}
+
+.container{
+width:90%;
+max-width:700px;
+background:rgba(255,255,255,.15);
+backdrop-filter:blur(15px);
+padding:40px;
+border-radius:25px;
+text-align:center;
+box-shadow:0 10px 30px rgba(0,0,0,.2);
+animation:fade 1.2s ease;
+z-index:2;
+}
+
+h1{
+font-family:"Great Vibes",cursive;
+font-size:60px;
+color:white;
+margin-bottom:20px;
+}
+
+.message{
+color:white;
+font-size:18px;
+line-height:1.8;
+margin-bottom:30px;
+}
+
+button{
+padding:15px 35px;
+font-size:18px;
+border:none;
+border-radius:50px;
+cursor:pointer;
+background:white;
+color:#ff4d79;
+font-weight:bold;
+transition:.3s;
+}
+
+button:hover{
+transform:scale(1.08);
+background:#ff4d79;
+color:white;
+}
+
+#response{
+margin-top:25px;
+font-size:22px;
+color:white;
+font-weight:bold;
+display:none;
+}
+
+.heart{
+position:absolute;
+bottom:-20px;
+font-size:20px;
+animation:float linear infinite;
+opacity:.8;
+}
+
+@keyframes float{
+0%{
+transform:translateY(0) rotate(0deg);
+opacity:0;
+}
+20%{
+opacity:1;
+}
+100%{
+transform:translateY(-110vh) rotate(360deg);
+opacity:0;
+}
+}
+
+@keyframes fade{
+from{
+opacity:0;
+transform:translateY(20px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+footer{
+position:absolute;
+bottom:15px;
+color:white;
+font-size:13px;
+opacity:.8;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>I'm Sorry ❤️</h1>
+
+<div class="message">
+
+My Love,
+
+I know I've been falling short when it comes to updating you, and I know this isn't the first time. I understand why it hurts you, and I'm truly sorry for making you feel unimportant or worried.
+
+You deserve someone who keeps you informed, someone who makes you feel secure, loved, and remembered every single day. Instead, I've repeated the same mistake, and I know saying "sorry" alone isn't enough anymore.
+
+I don't want this apology to be just another promise that fades away. I want my actions to become different. I want to be more mindful because you deserve consistency, not excuses.
+
+Thank you for staying with me despite my shortcomings. Thank you for loving me even when I make things difficult.
+
+I'm sorry for every moment you waited, every time you overthought because I forgot to update you, and every time I made you feel like you weren't my priority.
+
+You are one of the best things that has ever happened to me, and I never want my actions to make you question your place in my heart.
+
+I love you more than words can ever explain.
+
+Please allow me the chance to become better—not just because I promised, but because you deserve it.
+
+❤️
+
+</div>
+
+<button onclick="forgive()">Forgive Me?</button>
+
+<div id="response">
+Thank you for reading this. No matter what happens, I will always choose to love you and become a better boyfriend every single day. ❤️
+</div>
+
+</div>
+
+<footer>
+Made with all my love, just for you ❤️
+</footer>
+
+<script>
+
+function forgive(){
+document.getElementById("response").style.display="block";
+}
+
+function createHeart(){
+
+const heart=document.createElement("div");
+
+heart.classList.add("heart");
+
+heart.innerHTML="❤️";
+
+heart.style.left=Math.random()*100+"vw";
+
+heart.style.fontSize=(15+Math.random()*25)+"px";
+
+heart.style.animationDuration=(5+Math.random()*6)+"s";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},11000);
+
+}
+
+setInterval(createHeart,300);
+
+</script>
+
+</body>
+</html>
+```
